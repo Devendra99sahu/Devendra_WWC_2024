@@ -63,7 +63,7 @@ int main() {
     cout << "UID: 22BCS10166" << endl;
     cout << "Section: 630 A" << endl;
     cout << "Area of Interest: Gaming" << endl;
-    cout << "Age: [Your Age]" << endl;
+    cout << "Age: 21" << endl;
     cout << "Last Year CGPA: 7.1" << endl;
     cout << "DOB: 21/07/2003" << endl;
     cout << "Hometown: Durg,Chhattisgarh" << endl;
