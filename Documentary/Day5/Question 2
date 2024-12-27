@@ -1,0 +1,33 @@
+LeetCode 
+20. Valid Parenthesis
+
+#include <iostream>
+#include <stack>
+#include <unordered_map>
+using namespace std;
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> stk;
+        unordered_map<char, char> brackets = {{')', '('}, {'}', '{'}, {']', '['}};
+
+        for (char c : s) {
+            // If the character is a closing bracket
+            if (brackets.count(c)) {
+                // Check if the stack is non-empty and the top matches the expected opening bracket
+                if (!stk.empty() && stk.top() == brackets[c]) {
+                    stk.pop();
+                } else {
+                    return false;
+                }
+            } else {
+                // Push opening brackets onto the stack
+                stk.push(c);
+            }
+        }
+
+        // The string is valid if the stack is empty
+        return stk.empty();
+    }
+};
